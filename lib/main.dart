@@ -8,7 +8,7 @@ import 'src/settings/settings_service.dart';
 void main() async {
   // Init Hive (For storage)
   await Hive.initFlutter();
-
+  var box = await Hive.openBox("todolist_box");
   // Set up the SettingsController, which will glue user settings to multiple
   // Flutter Widgets.
   final settingsController = SettingsController(SettingsService());
